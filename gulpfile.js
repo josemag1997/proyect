@@ -8,7 +8,7 @@ gulp.task('pug', ()=>
 	.pipe(pug({
 		pretty: true //para agregar saltos de linea en el html
 	}))
-	.pipe(gulp.dest('./dist/'))//destino
+	.pipe(gulp.dest('./'))//destino
 	);
 gulp.task('watch', ()=>{
 	gulp.watch('./dev/views/**/*.pug', ['pug', browserSync.reload] ); //ejecuta la funcion
