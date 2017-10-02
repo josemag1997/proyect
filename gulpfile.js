@@ -11,7 +11,7 @@ gulp.task('pug', ()=>
 	.pipe(gulp.dest('./'))//destino
 	);
 gulp.task('watch', ()=>{
-	gulp.watch('./dev/views/**/*.pug', ['pug', browserSync.reload] ); //ejecuta la funcion
+	gulp.watch('./dev/views/*.pug', ['pug', browserSync.reload] ); //ejecuta la funcion
 })
 
 gulp.task('server', function(){
