@@ -1,0 +1,134 @@
+@import url('reset.css');
+@import url('fuentes.css');
+
+/*--- Estilos generales ---*/
+
+body {
+	background: #2d2d2d;
+	font-family: arial, helvetica, sans-serif;
+}
+
+a{ text-decoration:none; color:#fff;}
+a:hover {text-decoration:underline;}
+
+header{
+	/*background: green;*/
+	background: rgb(158,203,45); /* Old browsers */
+background: -moz-linear-gradient(top, rgb(158,203,45) 0%, rgb(60,109,44) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgb(158,203,45) 0%,rgb(60,109,44) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgb(158,203,45) 0%,rgb(60,109,44) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ecb2d', endColorstr='#3c6d2c',GradientType=0 ); 
+box-shadow: 3px 3px #000;
+text-align: justify-all;
+}
+/*--logotipo---*/
+#logotipo{
+	width: 960px;
+	margin: auto;
+}
+
+header #logotipo nav {
+	
+	float: left;;
+	width: 660px;
+	padding: 30px 0px; 
+	text-align:right;
+
+}
+header #logotipo a{
+	float: left;
+	padding: 40px;
+	font-size: 60px;
+}
+img{
+	height: 80px;
+	width: 80px;
+	float: right;
+}
+
+#logotipo a:hover {text-decoration:none; }
+
+header #logotipo nav ul li a {
+	color: #fff;
+font-size:18px;
+padding: 10px;border-radius: 2px;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+float: left;
+
+}
+
+header #logotipo nav ul li a:hover {
+	color:#ff3064;
+	background:#1798af;
+	text-decoration:none;
+}
+#w{
+	width: 960px;
+	margin: auto;
+	color: white;
+	text-align: justify;
+}
+#w {
+	width:960px;
+	margin:auto;
+	clear:both;
+}
+
+/*--- HEADER ---*/
+
+header {
+	width: 100%;
+	float:left;
+}
+#p1, .pug1{
+	font-size: 30px;
+	text-align: center;
+	border-radius: 5px;
+}
+.uno{
+	background: #fc2d45;
+	padding: 20px;
+	border-radius: 5px;
+
+}
+
+.dos{
+	background: #fc2d45;
+	padding: 20px;
+	border-radius: 5px;
+}
+.tres{
+	background: #1b4589; /*instalacion cuadro verde*/
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.pt{
+	background: #6d5e13; /*instalacion cuadro verde*/
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.id_nave{
+	font-size: 10px;
+}
+.cuatro{
+	background: #7a2727; /*instalacion cuadro verde*/
+	padding: 20px;
+	border-radius: 5px;
+	
+}
+.cinco, {
+	background: #582db5; /*instalacion cuadro verde*/
+	padding: 20px;
+	border-radius: 5px;
+	
+}
+
+.box {
+	background: #582db5; /*instalacion cuadro verde*/
+	padding: 20px;
+	border-radius: 5px;
+	/*box-shadow: 3px 3px #000;*/
+}

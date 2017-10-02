@@ -1,0 +1,109 @@
+html
+	head
+		title  Instalación 
+
+		<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+		body
+			header
+				<div id="logotipo"> <a ref=""> Pug   <img class="MTB" src="../imagenes/pug.png" alt="pug #1" ></a>
+					<div class="id_nav">
+						<nav >
+							<ul>
+								<li> <a href="http://localhost:3000/"> Inicio </a></li>
+								<li> <a href="http://localhost:3000/index2.html"> Instalación </a></li>
+								<li> <a href="http://localhost:3000/index3.html"> Video </a></li>
+								<li> <a href="http://localhost:3000/index4.html"> Acerca de Pug... </a></li>
+							</ul>
+						</nav> 
+					</div>
+				</div>
+		<section id="w">			
+			<section id="Bienvenidos">
+
+					article
+							hgroup 
+								p
+									ul
+										
+										<br><div class="tres"><li  id="p1"> ¿Qué debo tener para instalar PUG?</li>
+											<p class="tres"> * Para utilizar Pug en sublime text debemos instalar package control <a href="https://packagecontrol.io/installation"> https://packagecontrol.io/installation</a> seleccionamos y copiamos el código correspondiente a la versión de sublime text.</p> 
+											<p class="tres"> * Luego vamos a view seleccionamos show console, se nos abre una ventana en blanco en la parte de abajo en sublime text y hay pegamos el código anterior y damos enter.</p>
+											<p class="tres"> * Esperamos que termine la instalación.</p>
+											<p class="tres"> * Luego nos vamos a la parte de arriba de sublime text y buscamos preferences, buscamos una opción que dice package control seleccionamos luego nos sale una ventana en la cual escribimos install package y damos enter.</p>
+											<p class="tres"> * Luego aparece otra ventana en la cual escribimos jade y seleccionamos donde dice jade solo sin ningún prefijo y damos enter.</p>
+											<p class="tres"> * Listo ya tenemos instalado Pug (jade).</p></div>
+			</section >
+
+				<br>
+				<section id="contenido">
+					<article>
+						<hgroup class="pt">
+							<h2 class="pug1"> Para usar pug con gulp</h2>
+
+								<p class="pt"> Para poder usar Pug en nuestro editor de códigos debemos tener nodejs que es un motor de vistas, puedes descargarlo desde su página oficial nodejs.org. tambien Debemos tener instalado Gulp y Pug, Gulp en caso de que al instalar nodejs no se instalo esté paquete podemos instalarlo de la siguiente forma. 
+								<li class="pt"> Con la combinación de teclas en Windows CTRL + R y escribimos CMD. 
+								<li class="pt"> 2 Estando en el CMD escribimos npm install pug y esperamos a que termine el proceso 
+								<li class="pt"> 3.En la misma ventana de CMD escribimos npm install gulp-install, cuando fina<li class="pt">ce el proceso ya tendremos instalado Pug y Gulp. 
+								<li class="pt"> 4.Nos dirigimos al escritorio de Windows y creamos una carpeta con el nombre “proyecto”. 
+								<li class="pt"> 5.Regresamos a CMD y escribimos cd Desktop/proyecto y presionamos la tecla  enter.
+								<li class="pt">  6.Después  aparecerá la ruta anterior y escribimos npm init y presionamos la tecla enter. 
+								<li class="pt"> 7.Buscamos donde dice package name: escribimos otra vez “proyecto” damos enter.
+								<li class="pt"> entry point: (index.js) (aqui se pondra un pantallazo como imagen de este codigo)
+								<li class="pt"> test command:
+								<li class="pt"> git repository:
+								<li class="pt"> keywords:
+								<li class="pt"> author: aquí escribiremos nuestro nombre y presionamos la tecla enter
+								<li class="pt"> cense: (ISC) y enter</li> <br>
+
+								p About to write to C:\Users\José Manuel A. G\Desktop\pro\package.json: aparecerá el mensaje anterior y dar enter y aparecerá un resumen de todos los datos que hemos ingresado y luego aparece esto Is this ok? (yes) escribimos yes y enter
+								p Luego colocamos npm install –save-dev gulp para agregar el paquete como dependencia en el package.json entonces Procedemos a instalar el paquete npm install –save-dev gulp-postcss
+								p También instalamos npm install –save-dev autoprefixer Y finalmente npm install –save-dev gulp-sass
+								p En la carpeta que hemos llamado proyecto crearemos una carpeta llamada dev dentro de ella creamos una carpeta llamada views y creamos un archivo llamado index.pug
+								<li class="pt"> Regresamos a la carpeta proyecto y creamos un archivo llamado gulpfile.js
+								<li class="pt"> Vamos a nuestro editor de código (sublime text) y abrimos la carpeta llamada proyecto   
+								<li class="pt"> Abrimos el archivo dev/ views/ index.pug y escribimos h1 mi proyecto y guardamos los cambios 
+								p Después nos vamos al archivo gulpfile.js y escribimos el siguiente código (en este codigo podemos poner un pantallazo como imagen)
+								<p class="pt"> var gulp = require('gulp'),
+								<p class="pt">	pug = require('gulp-pug'),
+								<p class="pt">		watch = require('gulp-watch'),
+								<p class="pt">		browserSync = require('browser-sync').create();
+
+								<p class="pt">	gulp.task('pug', ()=></p>
+								<p class="pt">		gulp.src('./dev/views/*.pug')//origen 
+								<p class="pt">		.pipe(pug({
+								<p class="pt">			pretty: true //para agregar saltos de linea en el html
+								<p class="pt">		}))
+								<p class="pt">		.pipe(gulp.dest('./dist/'))//destino
+								<p class="pt">		);
+								<p class="pt">	gulp.task('watch', ()=>{</p>
+								<p class="pt">		gulp.watch('./dev/views/**/*.pug', ['pug', browserSync.reload] ); //ejecuta la funcion
+								<p class="pt">	})
+
+								<p class="pt">	gulp.task('server', function(){
+								<p class="pt">	  browserSync.init({
+								<p class="pt">	    server:{
+								<p class="pt">	      baseDir:'./dist'
+								<p class="pt">	    }
+								<p class="pt">	  })
+								<p class="pt">	})
+
+								<p class="pt">	gulp.task('default', ['pug'] );
+								<p class="pt">	gulp.task('serve', ['watch', 'server']);
+
+								p Luego abrimos cmd con las teclas win + R y escribimos CMD y escribimos cd Desktop/proyecto y damos enter seguidamente gulp pug y nuevamente enter Volvemos al editor de código y vemos que crearon una carpeta llamada dist y dentro de ella un index.html 
+								p Para recargar los navegadores: este codigo (otro pantallazo aqui como imagen)
+								<li class="pt"> npm install -g browser-sync
+								<li class="pt"> npm install –save-dev browser-sync dependencia
+								<li class="pt"> browser-sync start --server --files "./*.pug"
+								<li class="pt"> browser-sync start --server --files "./*.*"
+
+
+
+								p acerca de pug... el Logo de jade ahora llamado pug Antes era conocido como “jade” pero como este nombre ya era una marca registrada entonces eligieron llamarlo pug por su fácil y corto no nombre.
+						</hgroup>
+					</article>
+				</section>
+			<!--img class="masterbike" src="../imagenes/cmd.png" alt="cmd" -->
+
+			 
+		</section>
